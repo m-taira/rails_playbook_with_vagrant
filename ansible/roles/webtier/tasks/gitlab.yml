@@ -1,0 +1,7 @@
+- name: check gitlab installed
+  sudo: yes
+  shell: /bin/bash -lc "curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash"
+  register: ruby_installed
+  ignore_errors: yes
+- name: gitlabのインストール
+  yum: name=gitlab-ce state=latest

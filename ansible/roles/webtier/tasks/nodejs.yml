@@ -1,0 +1,4 @@
+- name: Nodejsインストール
+  yum: name=nodejs state=latest
+- name: npmのインストール
+  yum: name=npm state=latest
